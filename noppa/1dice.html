@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Noppapeli yhdellä nopalla</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix"> <!--
+        <nav>
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="index.html">Etusivu</a>
+            </li>
+            <li>
+              <a href="muunnin.html">Lämpötilamuunnin</a>
+            </li>
+            <li class="active">
+              <a href="sika.html">Sika-noppapeli</a>
+            </li>
+            <li>
+              <a href="validate.html">Validate</a>
+            </li>
+            <li>
+              <a href="movielist.html">Elokuvalista</a>
+            </li>
+            <li>
+              <a href="bookmarker.html">Bookmarker</a>
+            </li>
+          </ul>
+        </nav> -->
+        <h3 class="text-muted">Noppapeli</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">Noppapeli yhdellä nopalla<img src="img/dice.png" width="35" height="35"></h1>
+        <p class="lead"></p> <!--
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+      </div>
+
+      <div class="row marketing">
+        <h2>Pelataan!</h2>
+          <div class="col-lg-6">
+            <!-- PELAAJA 1 -->
+            <h3>Pelaaja 1</h3>
+              <button id="roll1" onClick="diceRoller1()" class="btn btn-success">Heitä noppaa</button>
+              <button id="stop1" onClick="stopRoller1()" class="btn btn-primary"disabled>Lopeta vuorosi</button>
+              <br>
+              <img id="dice1">
+              <p id="uno1"></p>
+              <p id="result1"></p>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- PELAAJA 2 -->
+            <h3>Pelaaja 2</h3>
+              <button id="roll2" onClick="diceRoller2()" class="btn btn-success"disabled>Heitä noppaa</button>
+              <button id="stop2" onClick="stopRoller2()" class="btn btn-primary" disabled>Lopeta vuorosi</button>
+              <br>
+              <img id="dice2">
+              <p id="uno2"></p>
+              <p id="result2"></p>
+          </div>
+
+          <div class="col-lg-12">
+            <div align="center">
+              <!-- TULOKSET -->
+              <p>Tulokset:</p>
+              <table>
+                <tr>
+                  <td>Pelaaja 1</td>
+                  <td>pelaaja 2</td>
+                </tr>
+                <tr>
+                  <td><p id="tota1"></p></td>
+                  <td><p id="tota2"></p></td>
+                  <tr/>
+              </table>
+            </div>
+          </div>
+<!--
+      <h4><a href="#">Palaa etusivulle</a><h4> -->
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Santeri Särkkä 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <script>
+      function getSum(total, num) {
+        return total + Math.round(num);
+      }
+
+      /* PELAAJA 1 */
+      var result1 = [];
+      var total1 = 0;
+      /* NOPPA */
+      function diceRoller1() {
+        document.getElementById("stop1").disabled = false;
+        document.getElementById("dice1").innerHTML = Math.random();
+
+        /* YKSI */
+        if (Math.random() < 0.167) {
+          document.getElementById("dice1").src = "img/1.png";
+          document.getElementById("uno1").innerHTML = "Heitit ykkösen. Vuorosi siirtyy";
+          document.getElementById("uno2").innerHTML = "";
+          document.getElementById("result1").innerHTML = 0;
+          document.getElementById("roll1").disabled = true;
+          document.getElementById("stop1").disabled = true;
+          document.getElementById("roll2").disabled = false;
+          result1 = [];
+        }
+        /* KAKSI */
+        else if (0.168 < Math.random() < 0.333) {
+          document.getElementById("dice1").src = "img/2.png";
+          result1.push(2);
+          document.getElementById("result1").innerHTML = result1;
+        }
+        /* KOLME */
+        else if (0.334 < Math.random() < 0.500) {
+          document.getElementById("dice1").src = "img/3.png";
+          result1.push(3);
+          document.getElementById("result1").innerHTML = result1;
+        }
+        /* NELJÄ */
+        else if (0.501 < Math.random() < 0.667) {
+          document.getElementById("dice1").src = "img/4.png";
+          result1.push(4);
+          document.getElementById("result1").innerHTML = result1;
+        }
+        /* VIISI */
+        else if (0.668 < Math.random() < 0.833) {
+          document.getElementById("dice1").src = "img/5.png";
+          result1.push(5);
+          document.getElementById("result1").innerHTML = result1;
+        }
+        /* KUUSI */
+        else {
+          document.getElementById("dice1").src = "img/6.png";
+          result1.push(6);
+          document.getElementById("result1").innerHTML = result1;
+        }
+      }
+      /* VUORON VAIHTO */
+      function stopRoller1() {
+        total1+=result1.reduce(getSum,0);
+        document.getElementById("tota1").innerHTML = total1;
+        result1 = [];
+        if (total1 >= 100) {
+          alert("Pelaaja 1 voittaa!");
+        }
+        document.getElementById("roll1").disabled = true;
+        document.getElementById("stop1").disabled = true;
+        document.getElementById("roll2").disabled = false;
+        document.getElementById("uno2").innerHTML = "";
+        document.getElementById("dice1").innerHTML = "";
+      }
+
+
+      /* PELAAJA 2 */
+      var result2 = [];
+      var total2 = 0;
+      /* NOPPA */
+      function diceRoller2() {
+        document.getElementById("stop2").disabled = false;
+        document.getElementById("dice2").innerHTML = Math.random();
+
+        /* YKSI */
+        if (Math.random() < 0.167) {
+          document.getElementById("dice2").src = "img/1.png";
+          document.getElementById("uno2").innerHTML = "Heitit ykkösen. Vuorosi siirtyy";
+          document.getElementById("uno1").innerHTML = "";
+          document.getElementById("result2").innerHTML = 0;
+          document.getElementById("roll1").disabled = false;
+          document.getElementById("stop1").disabled = false;
+          document.getElementById("roll2").disabled = true;
+          document.getElementById("stop2").disabled = true;
+          result2 = [];
+        }
+        /* KAKSI */
+        else if (0.168 < Math.random() < 0.333) {
+          document.getElementById("dice2").src = "img/2.png";
+          result2.push(2);
+          document.getElementById("result2").innerHTML = result2;
+        }
+        /* KOLME */
+        else if (0.334 < Math.random() < 0.500) {
+          document.getElementById("dice2").src = "img/3.png";
+          result2.push(3);
+          document.getElementById("result2").innerHTML = result2;
+        }
+        /* NELJÄ */
+        else if (0.501 < Math.random() < 0.667) {
+          document.getElementById("dice2").src = "img/4.png";
+          result2.push(4);
+          document.getElementById("result2").innerHTML = result2;
+        }
+        /* VIISI */
+        else if (0.668 < Math.random() < 0.833) {
+          document.getElementById("dice2").src = "img/5.png";
+          result2.push(5);
+          document.getElementById("result2").innerHTML = result2;
+        }
+        /* KUUSI */
+        else {
+          document.getElementById("dice2").src = "img/6.png";
+          result2.push(6);
+          document.getElementById("result2").innerHTML = result2;
+        }
+      }
+      /* VUORON VAIHTO */
+      function stopRoller2() {
+        total2+=result2.reduce(getSum,0);
+        document.getElementById("tota2").innerHTML = total2;
+        result2 = [];
+        if (total2 >= 100) {
+          alert("Pelaaja 2 voittaa!");
+        }
+        document.getElementById("roll1").disabled = false;
+        document.getElementById("roll2").disabled = true;
+        document.getElementById("stop2").disabled = true;
+        document.getElementById("uno1").innerHTML = "";
+        document.getElementById("dice2").innerHTML = "";
+        document.getElementById("result2").innerHTML = 0;
+      }
+
+    </script>
+  </body>
+</html>

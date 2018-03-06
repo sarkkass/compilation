@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="SHORTCUT ICON" href="img/s.ico" />
+    <link rel="icon" href="/s.ico" type="image/ico" />
+
+    <title>Lämpötilamuunnin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="index.html">Etusivu</a>
+            </li>
+            <li class="active">
+              <a href="muunnin.html">Lämpötilamuunnin</a>
+            </li>
+            <li>
+              <a href="sika.html">Sika-noppapeli</a>
+            </li> <!--
+            <li>
+              <a href="validate.html">Validate</a>
+            </li> -->
+            <li>
+              <a href="movielist.html">Elokuvalista</a>
+            </li>
+            <li>
+              <a href="bookmarker.html">Bookmarker</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Keep it Simple</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">Lämpötilamuunnin</h1>
+        <p class="lead">Tässä on lämpötilamuunnin</p> <!--
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Celcius </h4>
+          <input id="inputselect" placeholder="Lämpötila"></input> <!--
+          <select id="dropselect">
+            <option value="1">Celcius</option>
+            <option value="2">Fahrenheit</option>
+            <option value="3">Kelvin</option>
+          </select> -->
+          <br> <br>
+          <button onclick="celcius()" class="btn btn-success">Muunna</button>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Muunnos</h4>
+          <p id="celc1"></p>
+          <p id="fahr1"></p>
+          <p id="kelv1"></p>
+          <p id="error1"></p>
+        </div>
+      </div>
+<!--
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Fahrenheit</h4>
+          <input id="inputselect2" placeholder="Lämpötila"></input>
+          <select id="dropselect">
+            <option value="1">Celcius</option>
+            <option value="2">Fahrenheit</option>
+            <option value="3">Kelvin</option>
+          </select>
+          <br> <br>
+          <button onclick="fahrenheit()" class="btn btn-success">Muunna</button>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Muunnos</h4>
+          <p id="celc2"></p>
+          <p id="fahr2"></p>
+          <p id="kelv2"></p>
+          <p id="error2"></p>
+        </div>
+      </div> -->
+
+      <footer class="footer">
+        <p>&copy; Santeri Särkkä 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <script>
+    function celcius(){
+      document.getElementById("celc1").innerHTML = document.getElementById("inputselect").value + "&deg; Celciusta" + "<br>";
+      document.getElementById("fahr1").innerHTML = document.getElementById("inputselect").value * 1 + 273.15 + "&deg; Fahrenheitia" + "<br>";
+      document.getElementById("kelv1").innerHTML = document.getElementById("inputselect").value * 1.8 + 32 +   "&deg;   Kelviniä" + "<br>";
+    }
+/*
+    function fahrenheit(){
+      document.getElementById("celc2").innerHTML = (document.getElementById("inputselect2").value * 1-32)/1.8 "&deg; Celciusta" + "<br>";
+      document.getElementById("fahr2").innerHTML = document.getElementById("inputselect2").value * 1 + 273.15 + "&deg; Fahrenheitia" + "<br>";
+      document.getElementById("kelv2").innerHTML = document.getElementById("inputselect2").value * 1.8 + 32 +   "&deg;   Kelviniä" + "<br>";
+    }
+  */  </script>
+  </body>
+</html>

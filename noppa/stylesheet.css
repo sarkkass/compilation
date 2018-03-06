@@ -1,0 +1,47 @@
+#roll1, #roll2, #stop1, #stop2 {
+  font-size: 20px; /*
+  background-color: #d9d9d9; */
+}
+
+html {
+  margin-left: 20px;
+}
+
+#name {
+  font-weight:600;
+}
+
+#diceg1, #diceg2 {
+    font-size: 18px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+#p1noppa1, #p1noppa2, #p2noppa1, #p2noppa2 {
+  font-size: 14px;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#noppa11, #noppa12, #noppa21, #noppa22 {
+  width: 60px;
+  height: 60px;
+}
+
+#p1nopat, #p2nopat {
+  margin-top: 10px;
+}
+
+#tulostaulukko {
+  margin-top: : 10px;
+  width: 150px;
+}
+
+#p1noppa1, #p2noppa1, #p1noppa2, #p2noppa2 {
+  width: 60px;
+  height: 60px;
+}

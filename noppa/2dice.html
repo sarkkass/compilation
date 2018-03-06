@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Noppapeli yhdellä nopalla</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix"> <!--
+        <nav>
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="index.html">Etusivu</a>
+            </li>
+            <li>
+              <a href="muunnin.html">Lämpötilamuunnin</a>
+            </li>
+            <li class="active">
+              <a href="sika.html">Sika-noppapeli</a>
+            </li>
+            <li>
+              <a href="validate.html">Validate</a>
+            </li>
+            <li>
+              <a href="movielist.html">Elokuvalista</a>
+            </li>
+            <li>
+              <a href="bookmarker.html">Bookmarker</a>
+            </li>
+          </ul>
+        </nav> -->
+        <h3 class="text-muted">Noppapeli</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">Noppapeli kahdella nopalla<img src="img/dice.png" width="35" height="35"></h1>
+        <p class="lead"></p> <!--
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+      </div>
+
+      <div class="row marketing">
+        <h2>Pelataan!</h2>
+          <div class="col-lg-6">
+            <!-- PELAAJA 1 -->
+            <h3 id="name">Pelaaja 1</h3>
+              <button id="roll1" onClick="diceRoller1()" class="btn btn-success">Heitä noppaa</button>
+              <button id="stop1" onClick="stopRoller1()" class="btn btn-primary" disabled>Siirrä Vuorosi</button>
+              <table id="p1nopat">
+                <tr>
+                  <th colspan="100">Nopat</th>
+                </tr>
+                <tr>
+                  <th>Noppa 1</th>
+                  <th>Noppa 2</th>
+                </tr>
+                <tr>
+                  <td><img id="p1noppa1"></td>
+                  <td><img id="p1noppa2"></td>
+                </tr>
+                <tr>
+                  <td id="heitto11">0</td>
+                  <td id="heitto12">0</td>
+                </tr>
+                <tr>
+                  <td id="p1result" colspan="100">0</td>
+
+                  </tr>
+                </table>
+              <p id="uno1"></p>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- PELAAJA 2 -->
+            <h3 id="name">Pelaaja 2</h3>
+              <button id="roll2" onClick="diceRoller2()" class="btn btn-success" disabled>Heitä noppaa</button>
+              <button id="stop2" onClick="stopRoller2()" class="btn btn-primary" disabled>Siirrä Vuorosi</button>
+              <table id="p2nopat">
+                <tr>
+                  <th colspan="100">Nopat</th>
+                </tr>
+                <tr>
+                  <th>Noppa 1</th>
+                  <th>Noppa 2</th>
+                </tr>
+                <tr>
+                  <td><img id="p2noppa1"></td>
+                  <td><img id="p2noppa2"></td>
+                </tr>
+                <tr>
+                  <td id="heitto21">0</td>
+                  <td id="heitto22">0</td>
+                </tr>
+                <tr>
+                  <td id="p2result" colspan="100">0</td>
+                </tr>
+              </table>
+              <p id="uno2"></p>
+          </div>
+
+          <div class="col-lg-12">
+            <div align="center">
+              <!-- TULOKSET -->
+              <h3>Tulokset:</h3>
+                <table id="tulostaulukko">
+                  <tr>
+                    <th>Pelaaja 1</th>
+                    <th>Pelaaja 2</th>
+                  </tr>
+                  <tr>
+                    <td id="player1">0</td>
+                    <td id="player2">0</td>
+              </table>
+            </div>
+          </div>
+<!--
+      <h4><a href="#">Palaa etusivulle</a><h4> -->
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Santeri Särkkä 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+
+    <script>
+
+      function getSum(total, num) {
+        return total + Math.round(num);
+      }
+
+      /* PELAAJA 1 */
+      var result1 = [];
+      var double1 = [];
+      var total1 = 0;
+      /* NOPPA */
+      function diceRoller1() {
+        document.getElementById("stop1").disabled = false;
+        document.getElementById("p1noppa1").innerHTML = Math.random(1);
+        document.getElementById("p1noppa2").innerHTML = Math.random(2);
+        document.getElementById("uno1").innerHTML = "";
+        while(double1.length > 2) {
+          result1 = [];
+          document.getElementById("uno1").innerHTML = "Heitit tuplat kolme kertaa peräkkäin, vuorosi vaihtuu.";
+          document.getElementById("roll1").disabled = true;
+          document.getElementById("stop1").disabled = true;
+          document.getElementById("roll2").disabled = false;
+          document.getElementById("stop2").disabled = false;
+        }
+        /* YKSI */
+        if (Math.random(1) < 0.167) {
+          document.getElementById("heitto11").innerHTML = 1;
+          document.getElementById("p1noppa1").src = "img/1.png";
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplaykköset, saat 25 pistettä!";
+            result1.push(25);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.500 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          }
+        /* KAKSI */
+        else if (0.168 < Math.random(1) < 0.333) {
+          document.getElementById("heitto11").innerHTML = 2;
+          document.getElementById("p1noppa1").src = "img/2.png";
+          result1.push(2);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png"
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplakakkoset, saat 8 pistettä!"
+            result1.push(6);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            result1.push(3);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            result1.push(4);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            result1.push(5);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            result1.push(6);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+        }
+        /* KOLME */
+        else if (0.334 < Math.random(1) < 0.500) {
+          document.getElementById("heitto11").innerHTML = 3;
+          document.getElementById("p1noppa1").src = "img/3.png";
+          result1.push(3);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png"
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            result1.push(2);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplakolmoset, saat 12 pistettä!"
+            result1.push(9);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            result1.push(4);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            result1.push(5);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            result1.push(6);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+        }
+        /* NELJÄ */
+        else if (0.501 < Math.random(1) < 0.667) {
+          document.getElementById("heitto11").innerHTML = 4;
+          document.getElementById("p1noppa1").src = "img/4.png";
+          result1.push(4);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png"
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            result1.push(2);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            result1.push(3);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplaneloset, saat 16 pistettä!"
+            result1.push(12);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            result1.push(5);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            result1.push(6);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+        }
+        /* VIISI */
+        else if (0.668 < Math.random(1) < 0.833) {
+          document.getElementById("heitto11").innerHTML = 5;
+          document.getElementById("p1noppa1").src = "img/5.png";
+          result1.push(5);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png"
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            result1.push(2);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            result1.push(3);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            result1.push(4);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplavitoset, saat 20 pistettä!"
+            result1.push(15);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            result1.push(6);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+        }
+        /* KUUSI */
+        else {
+          document.getElementById("heitto11").innerHTML = 6;
+          document.getElementById("p1noppa1").src = "img/6.png";
+          result1.push(6);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto12").innerHTML = 1;
+            document.getElementById("p1noppa2").src = "img/1.png"
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result1 = [];
+            double1 = [];
+            document.getElementById("roll1").disabled = true;
+            document.getElementById("stop1").disabled = true;
+            document.getElementById("roll2").disabled = false;
+            document.getElementById("stop2").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p1noppa2").src = "img/2.png";
+            result1.push(2);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p1noppa2").src = "img/3.png";
+            result1.push(3);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto12").innerHTML = 4;
+            document.getElementById("p1noppa2").src = "img/4.png";
+            result1.push(4);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p1noppa2").src = "img/5.png";
+            result1.push(5);
+            double1 = [];
+            document.getElementById("p1result").innerHTML = result1;
+          }
+          else {
+            document.getElementById("heitto12").innerHTML = 6;
+            document.getElementById("p1noppa2").src = "img/6.png";
+            document.getElementById("uno1").innerHTML = "Heitit tuplakutoset, saat 24 pistettä!"
+            result1.push(18);
+            double1.push(1);
+            document.getElementById("p1result").innerHTML = result1;
+          }
+        }
+      }
+      /* KIERROS */
+      function stopRoller1() {
+        total1+=result1.reduce(getSum,0);
+        document.getElementById("player1").innerHTML = total1;
+        result1 = [];
+        double1 = [];
+        if (total1 >= 100) {
+          alert("Pelaaja 1 voittaa!");
+        }
+        document.getElementById("roll1").disabled = true;
+        document.getElementById("stop1").disabled = true;
+        document.getElementById("roll2").disabled = false;
+        document.getElementById("stop2").disabled = false;
+        document.getElementById("p2noppa1").innerHTML = "";
+        document.getElementById("p2noppa2").innerHTML = "";
+      }
+
+
+      /* PELAAJA 2*/
+      var result2 = [];
+      var double2 = [];
+      var total2 = 0;
+      /* NOPPA */
+      function diceRoller2() {
+        document.getElementById("stop2").disabled = false;
+        document.getElementById("p2noppa1").innerHTML = Math.random(1);
+        document.getElementById("p2noppa2").innerHTML = Math.random(2);
+        document.getElementById("uno2").innerHTML = "";
+        while(double2.length > 2) {
+          result2 = [];
+          document.getElementById("uno2").innerHTML = "Heitit tuplat kolme kertaa peräkkäin, vuorosi vaihtuu.";
+          document.getElementById("roll2").disabled = true;
+          document.getElementById("stop2").disabled = true;
+          document.getElementById("roll1").disabled = false;
+          document.getElementById("stop1").disabled = false;
+        }
+        /* YKSI */
+        if (Math.random(1) < 0.167) {
+          document.getElementById("heitto21").innerHTML = 1;
+          document.getElementById("p2noppa1").src = "img/1.png";
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto21").innerHTML = 1;
+            document.getElementById("p2noppa1").src = "img/1.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplaykköset, saat 25 pistettä!";
+            result2.push(25);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto22").innerHTML = 2;
+            document.getElementById("p2noppa2").src = "img/2.png";
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto22").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            document.getElementById("uno1").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.500 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto12").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+        }
+        /* KAKSI */
+        else if (0.168 < Math.random(1) < 0.333) {
+          document.getElementById("heitto21").innerHTML = 2;
+          document.getElementById("p2noppa1").src = "img/2.png";
+          result2.push(2);
+          document.getElementById("p1result").innerHTML = result1;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto22").innerHTML = 1;
+            document.getElementById("p2noppa2").src = "img/1.png"
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto12").innerHTML = 2;
+            document.getElementById("p2oppa2").src = "img/2.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplakakkoset, saat 8 pistettä!"
+            result2.push(6);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto12").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            result2.push(3);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            result2.push(4);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto22").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            result2.push(5);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            result2.push(6);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+        }
+        /* KOLME */
+        else if (0.334 < Math.random(1) < 0.500) {
+          document.getElementById("heitto21").innerHTML = 3;
+          document.getElementById("p2noppa1").src = "img/3.png";
+          result2.push(3);
+          document.getElementById("p2result").innerHTML = result2;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto22").innerHTML = 1;
+            document.getElementById("p2noppa2").src = "img/1.png"
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto22").innerHTML = 2;
+            document.getElementById("p2noppa2").src = "img/2.png";
+            result2.push(2);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto22").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplakolmoset, saat 12 pistettä!"
+            result2.push(9);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result1;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            result2.push(4);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto22").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            result2.push(5);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            result2.push(6);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+        }
+        /* NELJÄ */
+        else if (0.501 < Math.random(1) < 0.667) {
+          document.getElementById("heitto21").innerHTML = 4;
+          document.getElementById("p2noppa1").src = "img/4.png";
+          result2.push(4);
+          document.getElementById("p2result").innerHTML = result2;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto22").innerHTML = 1;
+            document.getElementById("p2noppa2").src = "img/1.png"
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto22").innerHTML = 2;
+            document.getElementById("p2noppa2").src = "img/2.png";
+            result2.push(2);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto22").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            result2.push(3);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplaneloset, saat 16 pistettä!"
+            result2.push(12);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto22").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            result2.push(5);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            result2.push(6);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+        }
+        /* VIISI */
+        else if (0.668 < Math.random(1) < 0.833) {
+          document.getElementById("heitto21").innerHTML = 5;
+          document.getElementById("p2noppa1").src = "img/5.png";
+          result2.push(5);
+          document.getElementById("p2result").innerHTML = result2;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto22").innerHTML = 1;
+            document.getElementById("p2noppa2").src = "img/1.png"
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto22").innerHTML = 2;
+            document.getElementById("p2noppa2").src = "img/2.png";
+            result2.push(2);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto22").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            result2.push(3);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            result2.push(4);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto22").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplavitoset, saat 20 pistettä!"
+            result2.push(15);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            result2.push(6);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+        }
+        /* KUUSI */
+        else {
+          document.getElementById("heitto21").innerHTML = 6;
+          document.getElementById("p2noppa1").src = "img/6.png";
+          result2.push(6);
+          document.getElementById("p2result").innerHTML = result2;
+          if (Math.random(2) < 0.167) {
+            document.getElementById("heitto22").innerHTML = 1;
+            document.getElementById("p2noppa2").src = "img/1.png"
+            document.getElementById("uno2").innerHTML = "Heitit ykkösen, vuorosi siirtyy.";
+            result2 = [];
+            double2 = [];
+            document.getElementById("roll2").disabled = true;
+            document.getElementById("stop2").disabled = true;
+            document.getElementById("roll1").disabled = false;
+            document.getElementById("stop1").disabled = false;
+          }
+          else if (0.168 < Math.random(2) < 0.333) {
+            document.getElementById("heitto22").innerHTML = 2;
+            document.getElementById("p2noppa2").src = "img/2.png";
+            result2.push(2);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.334 < Math.random(2) < 0.500) {
+            document.getElementById("heitto22").innerHTML = 3;
+            document.getElementById("p2noppa2").src = "img/3.png";
+            result2.push(3);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.501 < Math.random(2) < 0.667) {
+            document.getElementById("heitto22").innerHTML = 4;
+            document.getElementById("p2noppa2").src = "img/4.png";
+            result2.push(4);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else if (0.668 < Math.random(2) < 0.833) {
+            document.getElementById("heitto22").innerHTML = 5;
+            document.getElementById("p2noppa2").src = "img/5.png";
+            result2.push(5);
+            double2 = [];
+            document.getElementById("p2result").innerHTML = result2;
+          }
+          else {
+            document.getElementById("heitto22").innerHTML = 6;
+            document.getElementById("p2noppa2").src = "img/6.png";
+            document.getElementById("uno2").innerHTML = "Heitit tuplakutoset, saat 24 pistettä!"
+            result2.push(18);
+            double2.push(1);
+            document.getElementById("p2result").innerHTML = result2;
+          }
+        }
+      }
+      /* KIERROS */
+      function stopRoller2() {
+        total2+=result2.reduce(getSum,0);
+        document.getElementById("player2").innerHTML = total2;
+        result2 = [];
+        double2 = [];
+        if (total2 >= 100) {
+          alert("Pelaaja 2 voittaa!");
+        }
+        document.getElementById("roll2").disabled = true;
+        document.getElementById("stop2").disabled = true;
+        document.getElementById("roll1").disabled = false;
+        document.getElementById("stop1").disabled = false;
+        document.getElementById("p1noppa1").innerHTML = "";
+        document.getElementById("p1noppa2").innerHTML = "";
+      }
+
+    </script>
+  </body>
+</html>

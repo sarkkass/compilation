@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="SHORTCUT ICON" href="img/s.ico" />
+    <link rel="icon" href="/s.ico" type="image/ico" />
+
+    <title>Validate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="index.html">Etusivu</a>
+            </li>
+            <li>
+              <a href="muunnin.html">Lämpötilamuunnin</a>
+            </li>
+            <li>
+              <a href="sika.html">Sika-noppapeli</a>
+            </li>
+            <li class="active">
+              <a href="validate.html">Validate</a>
+            </li>
+            <li>
+              <a href="movielist.html">Elokuvalista</a>
+            </li>
+            <li>
+              <a href="bookmarker.html">Bookmarker</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Keep it Simple</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2 class="display-3">Lomakkeen validointi</h2> <!--
+        <p class="lead">IDGAF</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Why is this here?</a></p> -->
+
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <h2>Rekisteröintilomake</h2>
+            <form name="myForm" onsubmit="return validateForm()" method="post" id="myForm">
+              <div class="form-group">
+                <label>Käyttäjä ID:*</label>
+                <input type="text" class="form-control" id="id" placeholder="Käyttäjä ID">
+                <label>Salasana:*</label>
+                <input type="password" class="form-control" id="password" placeholder="Salasana">
+                <label>Vahvista salasana:*</label>
+                <input type="password" class="form-control" id="pswconfirm" placeholder="Vahvista salasana">
+              </div>
+              <div class="form-group">
+                <label>Etunimi:*</label>
+                <input type="text" class="form-control" id="first_name" placeholder="Etunimi">
+                <label>Sukunimi:*</label>
+                <input type="text" class="form-control" id="surname" placeholder="Sukunimi">
+                <label>Osoite:*</label>
+                <input type="text" class="form-control" id="address" placeholder="Osoite">
+              </div>
+              <div class="form-group">
+                <label>Maa:*</label>
+                <select id="country" name="country">
+                  <option value="choose">Valitse yksi</option>
+                  <option value="fin">Suomi</option>
+                  <option value="swe">Ruotsi</option>
+                  <option value="est">Viro</option>
+                  <option value="rus">Venäjä</option>
+                  <option value="other">Muu</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Postinumero:*</label>
+                <input type="text" id="zip_code" name="zipcode">
+
+                <label>Sähköposti:* </label>
+                <input type="text" id="e-mail"   name="email">
+
+                <label>Sukupuoli:*</label>
+                <select id="sex" name="sex">
+                  <option value="fin">Valitse yksi</option>
+                  <option value="fin">Mies</option>
+                  <option value="fin">Nainen</option>
+                  <option value="fin">Muu</option>
+                </select>
+
+                <label>Kieli:*</label>
+                  <input type="CHECKBOX" name="CHECKBOX_1" value="english"> Englanti
+                  <input type="CHECKBOX" name="CHECKBOX_2" value="Finnish"> Suomi
+                  <input type="CHECKBOX" name="CHECKBOX_3" value="other"> Muu
+
+                <label>Lisätiedot:* </label>
+                <textarea rows="5" cols="50" name="additional" id="add"></textarea>
+
+              </div>
+              <div class="form-group">
+                <input type="reset" value="Tyhjennä" id="reset">
+                <input type="submit" value="Lähetä" id="send">
+              </div>
+            </form>
+            <p>*Vaaditut kentät</p>
+        </div>
+      </div>
+    </div>
+      <footer class="footer">
+        <p>&copy; Santeri Särkkä 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+
+        function validateForm () {
+          /*KÄYTTÄJÄ ID*/
+          var idCheck = document.forms["myForm"]["userid"].value;
+            if (idCheck == null || idCheck == "") {
+              alert("Syötä käyttäjä ID");
+              return false;
+            }
+            else {
+              var value = document.getElementById("id").value;
+              if (value.length < 6) {
+                alert("Käyttäjätunnuksen tulee olla vähintään 6 merkkiä pitkä");
+                return false;
+              }
+            }
+
+          /*SALASANA*/
+          var pswCheck = document.forms["myForm"]["psw"].value;
+            if (pswCheck == null || pswCheck == "") {
+              alert("Syötä salasana");
+              return false;
+            }
+            else {
+              var value= document.getElementById("password").value;
+              if (value.length < 8) {
+                alert("Salasanan tulee olla vähintään 8 merkkiä");
+                return false;
+              }
+              else if (pswCheck == idCheck) {
+                alert("Salasana ei saa olla sama kuin käyttäjä ID");
+                return false;
+              }
+            }
+
+          /*SALASANA VAHVISTUS*/
+          var psw2Check = document.forms["myForm"]["psw2"].value;
+            if (psw2Check == null || psw2Check == "") {
+              alert("Vahvista salasana");
+              return false;
+            }
+            else {
+              var value = document.getElementById("pswconfirm").value
+                if (pswCheck != psw2Check) {
+                  alert("Salasanae eivät vastaa toisiaan")
+                  return false;
+                }
+              }
+
+          /*ETUNIMI*/
+          var nameCheck = document.forms["myForm"]["firstname"].value;
+            if (nameCheck == null || nameCheck == "") {
+              alert("Syötä etunimesi");
+              return false;
+            }
+
+          /*SUKUNIMI*/
+          var nameCheck = document.forms["myForm"]["surname"].value;
+            if (nameCheck == null || nameCheck == "") {
+              alert("Syötä sukunimesi");
+              return false;
+            }
+
+          /*OSOITE*/
+          var addressCheck = document.forms["myForm"]["address"].value;
+            if (addressCheck == null || addressCheck == "") {
+              alert("Syötä osoite.");
+              return false;
+            }
+
+          /*POSTINUMERO*/
+          var zipCodeCheck = document.forms["myForm"]["zipcode"].value;
+            if (zipCodeCheck == null || zipCodeCheck == "") {
+              alert("Syötä postinumero");
+              return false;
+            }
+            else {
+              var value =document.getElementById("zip_code").value;
+              if (value.length != 5) {
+                alert("postinumeron pitää olla 5 numeroa pitkä");
+                return false;
+              }
+            }
+
+          /*SÄHKÖPOSTI*/
+          var emailCheck = document.forms["myForm"]["email"].value;
+            var atpos = emailCheck.indexOf("@");
+            var dotpos = emailCheck.lastIndexOf(".");
+              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailCheck.length) {
+                  alert("Syötä kunnollinen sähköpostiosoite");
+                  return false;
+                }
+
+                /*CHECKBOXIT*/
+
+          /*LISÄTIETOJA*/
+          var addInfoCheck = document.forms["myForm"]["additional"].value;
+            if (addInfoCheck == null || addInfoCheck == "") {
+              alert("Kirjoita jotain litätietolaatikkoon (Maksimi on 300 merkkiä)");
+              return false;
+            }
+            else {
+              var value = document.getElementById("add").value;
+              if (value.length > 300) {
+                alert("Maksimi merkkimäärä lisätietolaatikossa on 300 merkkiä")
+                return false;
+              }
+            }
+
+          /*CHECKBOKSIT*/
+          if (myForm.CHECKBOX_1.checked == false &&	myForm.CHECKBOX_2.checked == false &&	myForm.CHECKBOX_3.checked == false) {
+            alert ("Choose atleast one language");
+            return false;
+          }
+          else {
+            return true;
+          }
+
+        }
+    </script>
+  </body>
+</html>

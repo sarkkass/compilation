@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="SHORTCUT ICON" href="img/s.ico" />
+    <link rel="icon" href="/s.ico" type="image/ico" />
+
+    <title>Site Bookmarker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bookmarker/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bookmarker/css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="fetchBookmarks()">
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs">
+            <li>
+              <a href="index.html">Etusivu</a>
+            </li>
+            <li>
+              <a href="muunnin.html">Lämpötilamuunnin</a>
+            </li>
+            <li>
+              <a href="sika.html">Sika-noppapeli</a>
+            </li> <!--
+            <li>
+              <a href="validate.html">Validate</a>
+            </li> -->
+            <li>
+              <a href="movielist.html">Elokuvalista</a>
+            </li>
+            <li class="active">
+              <a href="bookmarker.html">Bookmarker</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Keep it Simple</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2 class="display-3">Bookmark your favorite sites</h2>
+        <form id="myForm">
+          <div class="form-group">
+            <label>Site name</label>
+            <input type="text" class="form-control" id="siteName" placeholder="Website name">
+          </div>
+
+          <div class="form-group">
+            <label>Site URL</label>
+            <input type="text" class="form-control" id="siteUrl" placeholder="Website URL">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <div id="bookmarksResults"></div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Bookmarker</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <script src="bookmarker/js/bootstrap.min.js"></script>
+    <script src="bookmarker/js/main.js"></script>
+  </body>
+</html>

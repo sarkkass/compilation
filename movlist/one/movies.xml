@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+<collection>
+
+<!-- CONJURING -->
+  <movie>
+    <title>Conjuring</title>
+    <director>James Wan</director>
+    <starring>Patrick Wilson, Vera Farmiga, Ron Livingston</starring>
+    <writers>Carey Hayes, Chad Hayes</writers>
+    <producers>Tony DeRosa-Grund, Peter Safran, James Wan</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>112 minutes</running-time>
+    <language>English</language>
+    <music>Joseph Bishara</music>
+    <cinematography>John R. Leonetti</cinematography>
+    <editor>Kirk M. Morri</editor>
+    <year>2013</year>
+    <country>United States</country>
+    <production-company>New Line Cinema, The Safran Company</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$20 million</budget>
+    <box-office>$318 million</box-office>
+  </movie>
+
+<!-- CONJURING 2 -->
+  <movie>
+    <title>Conjuring 2</title>
+    <director>James Wan</director>
+    <starring>Vera Farmiga, Patric Wilson, Madison Wolfe</starring>
+    <writers>Carey Hayes, Chad Hayes, James Wan, David Leslie Johnson</writers>
+    <producers>Peter Safran, Rob Cowan, James Wan</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>134 minutes</running-time>
+    <language>English</language>
+    <music>Joshep Bishara</music>
+    <cinematography>Don Burgess</cinematography>
+    <editor>Kirk M. Morri</editor>
+    <year>2016</year>
+    <country>United States</country>
+    <production-company>New Line Cinema, The Safran Company, Atomic Monster Productions, RatPac Entertainment</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$40 million</budget>
+    <box-office>$320.2 million</box-office>
+  </movie>
+
+<!-- DARK SKIES -->
+  <movie>
+    <title>Dark Skies</title>
+    <director>Scott Stewart</director>
+    <starring>Keri Russell, Jake Brennan, Josh Hamilton</starring>
+    <writers>Scott Stewart</writers>
+    <producers>Jason Blum, Couper Samuelson, Jeanette Brill</producers>
+    <genre>Horror, Sci-fi, Thriller</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K12</rating>
+    <running-time>97 minutes</running-time>
+    <language>English</language>
+    <music>Joshep Bishara</music>
+    <cinematography>David Boyd</cinematography>
+    <editor>Peter Gvodas</editor>
+    <year>2013</year>
+    <country>United States</country>
+    <production-company>Entertainment One, Blumhouse Productions</production-company>
+    <distributor>Dimension Films</distributor>
+    <budget>$3.5 million</budget>
+    <box-office>$26.4 million</box-office>
+  </movie>
+
+<!-- ANNABELLE -->
+  <movie>
+    <title>Annabelle</title>
+    <director>John R. Leonetti</director>
+    <starring>Ward Horton, Annabelle Wallis, Alfre Woodard</starring>
+    <writers>Gary Dauberman</writers>
+    <producers>Peter Safran, James Wan</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>100 minutes</running-time>
+    <language>English</language>
+    <music>Joseph Bishara</music>
+    <cinematography>James Kniest</cinematography>
+    <editor>Tom Elkins</editor>
+    <year>2014</year>
+    <country>United States</country>
+    <production-company>New Line Cinema, Atomic Monster Productions,The Safran Company, RatPac Entertainment</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$6.5 million</budget>
+    <box-office>$256.9 million</box-office>
+  </movie>
+
+<!-- MAD MAX -->
+  <movie>
+    <title>Mad Max</title>
+    <director>George Miller</director>
+    <starring>Mel Gibson, Joanne Samuel, Hugh Keays-Byrne</starring>
+    <writers>James McCausland, George Miller, Byron Kennedy</writers>
+    <producers>Byron Kennedy</producers>
+    <genre>Action, Adventure, Sci-fi</genre>
+    <rating>NC-17 - Adults only, K18</rating>
+    <running-time>93 minutes</running-time>
+    <language>English</language>
+    <music>Brian May</music>
+    <cinematography>David Eggby</cinematography>
+    <editor>Tony Paterson, Cliff Hayes</editor>
+    <year>1979</year>
+    <country>Australia</country>
+    <production-company>Kennedy Miller Productions, Crossroads, Mad Max Films</production-company>
+    <distributor>Roadshow Entertainment</distributor>
+    <budget>AU$ 350,000-400,000 </budget>
+    <box-office>US$ 100,000</box-office>
+  </movie>
+
+<!-- MAD MAX 2 -->
+  <movie>
+    <title>Mad Max 2 - The Road Warrior</title>
+    <director>Geroge Miller</director>
+    <starring>Mel Gibson, Bruce Spence, Michael Preston</starring>
+    <writers>Terry Hayes, George Miller, Brian Hannant</writers>
+    <producers>Byron Kennedy</producers>
+    <genre>Action, Adcenture, Sci-fi</genre>
+    <rating>NC-17 - Adults Only, K18</rating>
+    <running-time>96 minutes</running-time>
+    <language>English</language>
+    <music>Brian May</music>
+    <cinematography>Dean Semler</cinematography>
+    <editor>David Stiven, Michael Balson, Tim Wellburn</editor>
+    <year>1981</year>
+    <country>Australia</country>
+    <production-company>Kennedy Miller Productions</production-company>
+    <distributor>Warner Bros.</distributor>
+    <budget>AU$ 4.5 million</budget>
+    <box-office>AU$ 10.8 million, US$23.7 million</box-office>
+  </movie>
+
+<!-- MAD MAX 3 -->
+  <movie>
+    <title>Mad Max 3 - Beyond Thunderdome</title>
+    <director>George Miller, George Ogilvie</director>
+    <starring>Mel Gibson, Tina Turner, Bruce Spence</starring>
+    <writers>Terry Hayes, George Miller </writers>
+    <producers>George Miller</producers>
+    <genre>Action, Adventure, Sci-fi</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>107 minutes</running-time>
+    <language>English</language>
+    <music>Maurice Jarre</music>
+    <cinematography>Dean Semler</cinematography>
+    <editor>Richard Francis-Bruce</editor>
+    <year>1985</year>
+    <country>Australia</country>
+    <production-company>Kennedy Miller productions</production-company>
+    <distributor>Warner Bros.</distributor>
+    <budget>$10 million</budget>
+    <box-office>$36.2 million</box-office>
+  </movie>
+
+<!-- MAD MAX: FURY ROAD -->
+  <movie>
+    <title>Mad Max - Fury Road</title>
+    <director>George Miller</director>
+    <starring>Tom Hardy, Charlize Theron, Nicholas Hoult</starring>
+    <writers>George Miller, Brendan McCarthy, Nick Lathouris</writers>
+    <producers>Doug Mitchell, George Miller, Nico Lathouris</producers>
+    <genre>Action, Advcenture, Sci-fi</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>120 minutes</running-time>
+    <language>English</language>
+    <music>Junkie XL</music>
+    <cinematography>John Seale</cinematography>
+    <editor>Margaret Sixel</editor>
+    <year>2015</year>
+    <country>Australia, United States</country>
+    <production-company>Village Roadshow Pictures, Kennedy Miller Mitchell, RatPac-Dune Entertainment</production-company>
+    <distributor>Roadshow Pictures, Warner Bros. Pictures</distributor>
+    <budget>$150 million</budget>
+    <box-office>$378.4 million</box-office>
+  </movie>
+
+<!-- lORD OF THE RINGS - THE FELLOWSHIP OF THE RING -->
+  <movie>
+    <title>The Lord of the Rings - The Fellowship of the Ring</title>
+    <director>Peter Jackson</director>
+    <starring>Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies,
+      Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Hugo Weaving, Sean Bean, Ian Holm, Andy Serkis</starring>
+    <writers>Fran Walsh, Philippa Boyens Peter Jackson, J.R.R. Tolkien (based on 'The Fellowship of the Ring' by Tolkien)</writers>
+    <producers>Barrie M. Osborne, Peter Jackson, Fran Walsh, Tim Sanders</producers>
+    <genre>Adventure, Drama, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K13</rating>
+    <running-time>178 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Lesnie</cinematography>
+    <editor>John Gilbert</editor>
+    <year>2001</year>
+    <country>New Zealand, United States</country>
+    <production-company>WingNut Films, The Saul Zaentz Company</production-company>
+    <distributor>New Line Cinema</distributor>
+    <budget>$93 million</budget>
+    <box-office>$871.5 million</box-office>
+  </movie>
+
+<!-- lORD OF THE RINGS - THE TWO TOWERS -->
+  <movie>
+    <title>The Lord of the Rings - The Two Towers</title>
+    <director>Peter Jackson</director>
+    <starring>Elijah Wood, Ian McKellen, Viggo Mortensen, Sean Astin, Liv Tyler, John Rhys-Davies, Bernard Hill,
+      Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Robyn Malcolm, Sean Bean, Ian Holm, Andy Serkis</starring>
+    <writers>Fran Walsh, Philippa Boyens, Stephen Sinclair, Peter Jackson, J.R.R. Tolkien (based on 'The Two Towers' by Tolkien)</writers>
+    <producers>Barrie M. Osborne, Fran Walsh, Peter Jackson</producers>
+    <genre>Adventure, Drama, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K13</rating>
+    <running-time>179 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Lesnie</cinematography>
+    <editor>Michael Horton, Jabez Olssen</editor>
+    <year>2002</year>
+    <country>Germany, New Zealand, United States</country>
+    <production-company>WingNut Films, The Saul Zaentz Company</production-company>
+    <distributor>New Line Cinema</distributor>
+    <budget>$94 million</budget>
+    <box-office>$926 million</box-office>
+  </movie>
+
+<!-- lORD OF THE RINGS - THE RETURN OF THE KING -->
+  <movie>
+    <title>The Lord of the Rings - The Return of the King</title>
+    <director>Peter Jackson</director>
+    <starring>Elijah Wood, ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Bernard Hill,
+      Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham, Karl Urban, John Noble, Andy Serkis, Ian Holme, Sean Bean </starring>
+    <writers>Fran Welsh, Philippa Boyens, Peter Jackson, J.R.R. Tolkien (based on 'The Return of the King' by Tolkien)</writers>
+    <producers>Barrie M. Osborne, Fran Walsh, Peter Jackson</producers>
+    <genre>Adventure, Drama, Fantasy</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>200 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Leslie</cinematography>
+    <editor>Jamie Selkirk</editor>
+    <year>2003</year>
+    <country>Germany, New Zealand, United States</country>
+    <production-company>WingNut Films, The Saul Zaentz Company</production-company>
+    <distributor>New Line Cinema</distributor>
+    <budget>$94 million</budget>
+    <box-office>$1.119 billion</box-office>
+  </movie>
+
+<!-- THE HOBBIT: AN UNEXPECTED JOURNEY -->
+  <movie>
+    <title>The Hobbit: An Unexpected Journey</title>
+    <director>Peter Jackson</director>
+    <starring>Ian McKellen, Martin Freeman, Richard Armitage, James Nesbitt, Ken Stott, Cate Blanchett, Ian Holm,
+       Christopher Lee, Hugo Weaving, Elijah Wood, Andy Serkis</starring>
+    <writers>Fran Walsh, Philippa Boyens, Peter Jackson, Guillemo del Toro, J.R.R. Tolkien (based on 'The Hobbit, or There and Back Again' by Tolkien)</writers>
+    <producers>Carolynne Cunningham, Zane Weiner, Fran Walsh, Peter Jackson</producers>
+    <genre>Adventure, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K12</rating>
+    <running-time>169 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Leslie</cinematography>
+    <editor>Jabez Olssen</editor>
+    <year>2012</year>
+    <country>New Zealand, United States</country>
+    <production-company>New Line Cinema, Metro-Goldwyn-Mayer, WingNut Films</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$200-315 million</budget>
+    <box-office>$1.021 billion</box-office>
+  </movie>
+
+<!-- THE HOBBIT: THE DESOLATION OF SMAUG -->
+  <movie>
+    <title>The Hobbit: The Desolation of Smaug</title>
+    <director>Peter Jackson</director>
+    <starring>Ian McKellen, Martin Freeman, Richard Armitage, Benedict Cumberbatch, Evangeline Lilly, Lee Pace,
+      Luke Evans, Ken Stott, James Nesbitt, Orlando Bloom</starring>
+    <writers>Fran Walsh, Philippa Boyens, Peter Jackson, Guillemo del Toro, J.R.R. Tolkien (based on 'The Hobbit, or There and Back Again' by Tolkien)</writers>
+    <producers>Carolynne Cunningham, Zane Weiner, Fran Walsh, Peter Jackson</producers>
+    <genre>Adventure, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K12</rating>
+    <running-time>161 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Lesnie</cinematography>
+    <editor>Jabez Olssen</editor>
+    <year>2013</year>
+    <country>New Zealand, United States</country>
+    <production-company>New Line Cinema, Metro-Goldwyn-Mayer</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$225 million</budget>
+    <box-office>$958.4 million</box-office>
+  </movie>
+
+<!-- THE HOBBIT: THE BATTLE OF FIVE ARMIES -->
+  <movie>
+    <title>The Hobbit: The Battle of Five Armies</title>
+    <director>Peter Jackson</director>
+    <starring>Martin Freeman, Ian McKellen, Richard Armitage, Evangeline Lilly, Luke Evans, Lee Pace,
+       Benedict Cumberbatch, Ken Stott, James Nesbitt, Cate Blanchett, Ian Holm, Christopher Lee, Hugo Weaving, Orlando Bloom</starring>
+    <writers>Fran Walsh, Philippa Boyens, Peter Jackson, Guillemo del Toro, J.R.R. Tolkien (based on 'The Hobbit, or There and Back Again' by Tolkien)</writers>
+    <producers>Carolynne Cunningham, Zane Weiner, Fran Walsh, Peter Jackson</producers>
+    <genre>Adventure, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K12</rating>
+    <running-time>144 minutes</running-time>
+    <language>English</language>
+    <music>Howard Shore</music>
+    <cinematography>Andrew Lesnie</cinematography>
+    <editor>Jabez Olssen</editor>
+    <year>2014</year>
+    <country>New Zealand, United States</country>
+    <production-company>New Line Cinema, Metro-Golwyn-Mayer, WingNut Films</production-company>
+    <distributor>Warner Bros. Pictures</distributor>
+    <budget>$250 million</budget>
+    <box-office>$956 million</box-office>
+  </movie>
+
+<!-- DEADPOOL -->
+  <movie>
+    <title>Deadpool</title>
+    <director>Tim Miller</director>
+    <starring>Ryan Reynolds, Morena Baccarin, T.J. Miller, Ed Skrein, Gina Carano Leslie Uggams, Brianna Hildebrand, Stefan Kapičić</starring>
+    <writers>Rhett Reese, Paul, Wernick</writers>
+    <producers>Simon Kinberg, Ryan Reynolds, Lauren Shuler Donner</producers>
+    <genre>Action, Adventure Comedy</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>108 minutes</running-time>
+    <language>English</language>
+    <music>Tom Holkenborg (Junkie XL)</music>
+    <cinematography>Ken Seng</cinematography>
+    <editor>Julian Clarke</editor>
+    <year>2016</year>
+    <country>United States</country>
+    <production-company>Marvel Entertainment, Kinberg Genre, The Donners' Company, TSG Entertainment</production-company>
+    <distributor>20th Century Fox</distributor>
+    <budget>$58 million</budget>
+    <box-office>$782.6 million</box-office>
+  </movie>
+
+<!-- SAW -->
+  <movie>
+    <title>Saw</title>
+    <director>James Wan</director>
+    <starring>Cary Elwes, Danny Glover, Monica Potter, Michael Emerson, Ken Leung, Tobin Bell, Leigh Whannell</starring>
+    <writers>Leigh Whannell, James Wan</writers>
+    <producers>Gregg Hoffman, Mark Burg, Oren Koules</producers>
+    <genre>Horror, Mystery Thriller</genre>
+    <rating> NC-17 Adults only, K18</rating>
+    <running-time>103 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Kevin Greutert</editor>
+    <year>2004</year>
+    <country>United States</country>
+    <production-company>Evolution Entertainment, Twisted Pictures</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$1.2 million</budget>
+    <box-office>$103.9 million</box-office>
+  </movie>
+
+<!-- SAW II -->
+  <movie>
+    <title>Saw II</title>
+    <director>Darren Lynn Bousman</director>
+    <starring>Donnie Wahlberg, Franky G, Glenn Plummer, Beverley Mitchell, Dina Meyer, Emmanuelle Vaugier, Erik Knudsen, Shawnee Smith, Tobin Bell</starring>
+    <writers>Darren Lynn Bousman, Leigh Whannell</writers>
+    <producers>Gregg Hoffman, Mark Burg, Oren Koules</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R- Restricted, K16</rating>
+    <running-time>93 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Kevin Greutert</editor>
+    <year>2005</year>
+    <country>United States</country>
+    <production-company>Twisted Pictures</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$4 million</budget>
+    <box-office>$147.7 million</box-office>
+  </movie>
+
+<!-- SAW III -->
+  <movie>
+    <title>Saw III</title>
+    <director>Darren Lynn Bousman</director>
+    <starring>Tobin Bell, Shawnee Smith, Angus Macfadyen, Bahar Soomekh, Dina Meyer</starring>
+    <writers>Leigh Whannell</writers>
+    <producers>Mark Burg, Gregg Hoffman, Oren Koules</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R- Restricted, K16</rating>
+    <running-time>108 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Kevin Greutert</editor>
+    <year>2006</year>
+    <country>United States</country>
+    <production-company>Twisted Pictures</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$10 million</budget>
+    <box-office>$164.8 million</box-office>
+  </movie>
+
+<!-- SAW IV -->
+  <movie>
+    <title>Saw IV</title>
+    <director>Darren Lynn Bousman</director>
+    <starring>Tobin Bell, Scott Patterson, Costas Mandylor, Betsy Russell, Lyriq Bent</starring>
+    <writers>Marcus Dunstan, Patrick Melton</writers>
+    <producers>Mark Burg, Gregg Hoffman, Oren Koules</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R- Restricted, K16</rating>
+    <running-time>92 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Kevin Greutert</editor>
+    <year>2007</year>
+    <country>United States</country>
+    <production-company>Twisted Films</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$10 million</budget>
+    <box-office>$139.3 million</box-office>
+  </movie>
+
+<!-- SAW V -->
+  <movie>
+    <title>Saw V</title>
+    <director>David Hackl</director>
+    <starring>Tobin Bell, Costas Mandylor, Scott Patterson, Betsy Russell, Mark Rolston, Julie Benz, Carlo Rota, Megan Good</starring>
+    <writers>Patrick Melton, Marcus Dunstan</writers>
+    <producers>Gregg Hoffman Mark Burg, Oren Koules</producers>
+    <genre>Horror, Mystery, Thriller</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>92 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Kevin Greutert</editor>
+    <year>2008</year>
+    <country>United States</country>
+    <production-company>Twisted Pictures</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$10.8 million</budget>
+    <box-office>$113.8 million</box-office>
+  </movie>
+
+<!-- SAW VI -->
+  <movie>
+    <title>Saw VI</title>
+    <director>Kevin Greutert</director>
+    <starring>Tobin Bell, Costas Mandylor, Betsy Russell, Mark Rolston, Peter Outerbridge, Shawnee Smith</starring>
+    <writers>Patrick Melton, Markus Dunstan</writers>
+    <producers>Mark Burg, Oren Koules</producers>
+    <genre>Horror, Mystery</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>90 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>David A. Armstrong</cinematography>
+    <editor>Andrew Coutts</editor>
+    <year>2009</year>
+    <country>United States</country>
+    <production-company>Twisted Pictures</production-company>
+    <distributor>Lionsgate Films</distributor>
+    <budget>$11 million</budget>
+    <box-office>$68.2 million</box-office>
+  </movie>
+
+<!-- SAW VII -->
+  <movie>
+    <title>Saw VII: The Final Chapter</title>
+    <director>Kevin Greutert</director>
+    <starring>Tobin Bell, Costas Mandylor, Betsy Russell, Sean Patrick Flanery, Cary Elwes</starring>
+    <writers>Patrick Melton, Marcus Dunstan</writers>
+    <producers>Gregg Hoffman, Oren Koules, Mark Burg</producers>
+    <genre>Horror, Mystery</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>90 minutes</running-time>
+    <language>English</language>
+    <music>Charlie Clouser</music>
+    <cinematography>Brian Gedge</cinematography>
+    <editor>Andrew Coutts</editor>
+    <year>2010</year>
+    <country>United States</country>
+    <production-company>Twiated Pictures</production-company>
+    <distributor>Lionsgate films</distributor>
+    <budget>$17 million</budget>
+    <box-office>$136.1 million</box-office>
+  </movie>
+
+<!-- WARCRAFT -->
+  <movie>
+    <title>Warcraft: The Beginning</title>
+    <director>Duncan Jones</director>
+    <starring>Travis Fimmel, Paula Patton, Ben Foster, Dominic Cooper, Toby Kebbel, Ben Schnetzer, Robert Kazinsky, Daniel Wu</starring>
+    <writers>Charles Leavitt, Duncan Jones, Chris Metzen</writers>
+    <producers>Thomas Tull, Jon Jashni, Charles Roven, Alex Gartner, Stuart Fenegan</producers>
+    <genre>Action, Adventure, Fantasy</genre>
+    <rating>PG-13 - Parents Strongly Cautioned, K12</rating>
+    <running-time>123 minutes</running-time>
+    <language>English</language>
+    <music>Ramin Djawadi</music>
+    <cinematography>Simon Duggan</cinematography>
+    <editor>Paul Hirsch</editor>
+    <year>2016</year>
+    <country>United States</country>
+    <production-company>Legendary Pictures, Blizzard Entertainment, Atlas Entertainment</production-company>
+    <distributor>Universal Pictures</distributor>
+    <budget>$160 million</budget>
+    <box-office>$443.5 million</box-office>
+  </movie>
+
+<!-- WRONG TURN -->
+  <movie>
+    <title>Wrong Turn</title>
+    <director>Rob Schmidt</director>
+    <starring>Desmond Harrington, Eliza Duskhu, Emmanuelle Chriqui, Jeremy Sisto, Kevin Zegers</starring>
+    <writers>Alan B. McElroy</writers>
+    <producers>Stan Winston, Brian Gilbert, Erik Feig, Robert Kulzer</producers>
+    <genre>Horror</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>84 minutes</running-time>
+    <language>English</language>
+    <music>Elia Cmiral</music>
+    <cinematography>John S. Bartley</cinematography>
+    <editor>Michael Ross</editor>
+    <year>2003</year>
+    <country>United States</country>
+    <production-company>Regency Enterprises, Constantin Film, Summit Entertainment</production-company>
+    <distributor>20th Century Fox</distributor>
+    <budget>$12.6 million</budget>
+    <box-office>$28.7 million</box-office>
+  </movie>
+
+<!-- WRONG TURN 2 -->
+  <movie>
+    <title>Wrong Turn 2: Dead End</title>
+    <director>Joe Lynch</director>
+    <starring>Erica Leerhsen, Henry Rollins, Texas Battle</starring>
+    <writers>Turi Meyer, Al Septien, Alan B. McElroy</writers>
+    <producers>Jeff Freilich</producers>
+    <genre>Horror</genre>
+    <rating>R - Restricted, K16</rating>
+    <running-time>97 minutes</running-time>
+    <language>English</language>
+    <music>Bear McCreary</music>
+    <cinematography>Robin Loewen</cinematography>
+    <editor>Ed Marx</editor>
+    <year>2007</year>
+    <country>United States</country>
+    <production-company>Summit Entertainment, Constantin Film</production-company>
+    <distributor>20th Century Fox</distributor>
+    <budget>$4 million</budget>
+    <box-office>Released on DVD, No box-office records</box-office>
+  </movie>
+
+<!-- WRONG TURN 3 -->
+  <movie>
+    <title>Wrong Turn 3: Left for Dead</title>
+    <director>Declan O'Brien</director>
+    <starring>Tom Frederic, Janet Montgomery, Tamer Hassan</starring>
+    <writers>Connor James Delaney</writers>
+    <producers>Jeffrey Beach, Phillip Roth</producers>
+    <genre>Horror</genre>
+    <rating>NC-17 - Adults only, K18</rating>
+    <running-time>92 minutes</running-time>
+    <language>English</language>
+    <music>Claude Foisy</music>
+    <cinematography>Lorenzo Senatore</cinematography>
+    <editor>Raúl Dávalos</editor>
+    <year>2009</year>
+    <country>United States</country>
+    <production-company>Summit Entertainment, Constantin Film</production-company>
+    <distributor>20th Century Fox Home Entertainment</distributor>
+    <budget>$2 million</budget>
+    <box-office>Released on DVD, No box-office records</box-office>
+  </movie>
+
+<!-- WRONG TURN 4 -->
+  <movie>
+    <title>Wrong Turn 4:  Bloody Beginnings</title>
+    <director>Declan O'Brien</director>
+    <starring>Jennifer Pudavick, Tenika Davis, Kaitlyn Leeb, Terra Vnesa</starring>
+    <writers>Declan O'Brien</writers>
+    <producers>Kim Todd</producers>
+    <genre>Horror</genre>
+    <rating>R - Restricted K16</rating>
+    <running-time>93 minutes</running-time>
+    <language>English</language>
+    <music>Claude Foisy</music>
+    <cinematography>Michael Marshall</cinematography>
+    <editor>Stein Myhrstad</editor>
+    <year>2011</year>
+    <country>United States</country>
+    <production-company>Summit Entertainment, Constantin Film</production-company>
+    <distributor>20th Century Fox Home Entertainment</distributor>
+    <budget>$2 million</budget>
+    <box-office>Released on DVD, No box-office records</box-office>
+  </movie>
+
+<!-- WRONG TURN 5 -->
+<movie>
+  <title>Wrong Turn 5: Bloodlines</title>
+  <director>Declan O'Brien</director>
+  <starring>Doug Bradley, Camilla Arfwedson, Simon Ginty, Roxanne McKee, Paul Luebke, Oliver Hoare, Kyle Redman Jones</starring>
+  <writers>Declan O'Brien</writers>
+  <producers>Jeffrey Beach, Phillip Roth</producers>
+  <genre>Horror</genre>
+  <rating>R - Restricted, K16</rating>
+  <running-time>91 minutes</running-time>
+  <language>English</language>
+  <music>Claude Foisy</music>
+  <cinematography>Emil Topuzov</cinematography>
+  <editor>Stein Myhrstad, Ludmil Kazakov</editor>
+  <year>2012</year>
+  <country>United States</country>
+  <production-company>Summit Entertainment, Constantin film</production-company>
+  <distributor>20th Century Fox Home Entertainment</distributor>
+  <budget>N/A</budget>
+  <box-office>Released on DVD, No box-office records</box-office>
+</movie>
+
+<!-- WRONG TURN 6 -->
+<movie>
+  <title>Wrong Turn 6: Last Resort</title>
+  <director>Valeri Milev</director>
+  <starring>Anthony Ilott, Chris Jarvis, Aqueela Zoll, Sadie Katz</starring>
+  <writers>Frank H. Woodward</writers>
+  <producers>Jeffrey Beach, Phillip Roth</producers>
+  <genre>Horror</genre>
+  <rating>R - Restricted, K16</rating>
+  <running-time>91 minutes</running-time>
+  <language>English</language>
+  <music>Claude Foisy</music>
+  <cinematography>Martin Chichov</cinematography>
+  <editor>Don Adams, Cameron Hallenbeck</editor>
+  <year>2014</year>
+  <country>United States</country>
+  <production-company>Regency Enterprises, Summit Entertainment, Constantin Film</production-company>
+  <distributor>20th Century For Home Entertainment</distributor>
+  <budget>$1.2 million</budget>
+  <box-office>Released on DVD, No box-office records</box-office>
+</movie>
+</collection>

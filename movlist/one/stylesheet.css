@@ -1,0 +1,100 @@
+collection {
+    background-color: #ffffff;
+    width: 100%;
+}
+movie {
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+}
+title {
+    display: block;
+    color: #000000;
+    font-size: 40px;
+}
+director {
+    display: block;
+    color: #0000ff;
+    font-size: 30px;
+}
+starring {
+    display: block;
+    color: #ff0000;
+    margin-left: 40px;
+    font-size: 20px;
+}
+writers {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+producers {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+genre {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+rating {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+running-time {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+language {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+music {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+cinematography {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+editor {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+year {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+country {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+production-company {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+distributor {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
+budget {
+  display: block;
+  color: #ff0000;
+  margin-left: 40px;
+}
+box-office {
+  display: block;
+  color: #0000ff;
+  margin-left: 40px;
+}
